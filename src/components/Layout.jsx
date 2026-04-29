@@ -1,12 +1,16 @@
-import React, { Children } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-function Layout({ children }) {
+import { Outlet } from "react-router-dom";
+
+function Layout() {
   return (
     <div>
       <Navbar />
-      <main className="mx-auto max-w-6x1 px-4 py-10 ">{children}</main>
+      <main className="mx-auto max-w-6xl px-4 py-10">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
